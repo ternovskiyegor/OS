@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-int play(float bet);
+float play(float bet);
 int areNumsTheSame(int * arr, int size);
 int isContains7(int * arr, int size);
 int isThreeRepeat(int * arr, int size);
@@ -23,10 +23,10 @@ int main() {
                 printf("Insufficient funds!\n");
             } else if (bet > 0) {
                 totalAmount -= bet;
-                int winsize = play(bet);
+                float winsize = play(bet);
                 if (winsize > bet) {
                     printf("YUUHUU! YOU WIN!\n");
-                    printf("  + %d $\n", winsize);
+                    printf("  + %.2f $\n", winsize);
                     totalAmount += winsize;
                 } else if (winsize == bet) {
                     printf("YOU HAVE YOUR MONEY BACK!");
@@ -80,7 +80,7 @@ int isThreeRepeat(int * arr, int size) {
     return 0;
 }
 
-int play(float bet) {
+float play(float bet) {
     int arr[6];
     int counter = 0;
     printf("[ ");
