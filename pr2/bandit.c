@@ -9,7 +9,7 @@ int isThreeRepeat(int * arr, int size);
 
 int main() {
     srand(time(0));
-    float bet, totalAmount = 500;
+    float bet, totalAmount = 700;
     int choice;
     while (1) {
         printf("\nTotal balance: %.2f $\n\n", totalAmount);
